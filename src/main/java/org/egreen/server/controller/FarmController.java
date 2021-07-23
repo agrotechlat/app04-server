@@ -1,5 +1,7 @@
 package org.egreen.server.controller;
 
+import org.egreen.server.dto.FarmCultureDetailReqDto;
+import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.TraySeedReqDto;
@@ -56,5 +58,14 @@ public class FarmController {
 	public @ResponseBody ResponseEntity<FarmRespDto> waterTrayStatus(@PathVariable Integer idFarm, @RequestParam Integer idWaterTray) {
 		FarmReqDto req = new FarmReqDto(idFarm, idWaterTray);
 		return new ResponseEntity<FarmRespDto>(farmsService.getWaterTrayStatus(req), HttpStatus.OK);
+	}
+	
+	@GetMapping("/farms/{idFarm}/cultures/{idCulture}/trays/{idTray}")
+	public @ResponseBody ResponseEntity<FarmCultureDetailRespDto> getCultureTrayDetail(
+				@PathVariable Integer idFarm,
+				@PathVariable Integer idCulture,
+				@PathVariable Integer idTray) {
+		FarmCultureDetailReqDto req = new FarmCultureDetailReqDto(idFarm, idCulture, idTray);
+		return new ResponseEntity<FarmCultureDetailRespDto>(farmsService.getTrayStatus(req), HttpStatus.OK);
 	}
 }

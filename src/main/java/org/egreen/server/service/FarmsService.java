@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.egreen.server.dto.CultureTray;
+import org.egreen.server.dto.FarmCultureDetailReqDto;
+import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.SeedDto;
@@ -57,6 +59,19 @@ public class FarmsService implements FarmsServiceI {
 		resp.setFarmId(farmReqDto.getIdFarm());
 		resp.setTray(waterTray);
 		
+		return resp;
+	}
+
+	@Override
+	public FarmCultureDetailRespDto getTrayStatus(FarmCultureDetailReqDto req) {
+		
+		// validate inputs and business rules
+		
+		// Database operations
+		
+		SeedDto seed = new SeedDto(1, "Lentils");
+		
+		FarmCultureDetailRespDto resp = new FarmCultureDetailRespDto(req.getIdTray(), LocalDateTime.now(), seed);
 		return resp;
 	}
 
