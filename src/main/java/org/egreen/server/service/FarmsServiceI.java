@@ -4,6 +4,7 @@ import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
 import org.egreen.server.dto.FarmCultureNewRespDto;
+import org.egreen.server.dto.FarmCultureUpdateRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.TraySeedReqDto;
@@ -30,5 +31,7 @@ public interface FarmsServiceI {
 	public FarmCultureDetailRespDto getTrayStatus(FarmCultureDetailReqDto req);
 
 	public FarmCultureNewRespDto newCultureTray(FarmCultureNewReqDto req);
+
+	public FarmCultureUpdateRespDto updateCulture(FarmCultureNewReqDto req);
 
 }

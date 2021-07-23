@@ -4,6 +4,7 @@ import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
 import org.egreen.server.dto.FarmCultureNewRespDto;
+import org.egreen.server.dto.FarmCultureUpdateRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.TraySeedReqDto;
@@ -80,5 +81,13 @@ public class FarmController {
 		req.setIdTray(idTray);
 		
 		return new ResponseEntity<FarmCultureNewRespDto>(farmsService.newCultureTray(req), HttpStatus.CREATED);
+	}
+	
+	@PutMapping("/farms/{idFarm}/cultures/{idCulture}/trays/{idTray}")
+	public @ResponseBody ResponseEntity<FarmCultureUpdateRespDto> updateCultureTray(@PathVariable Integer idFarm, @PathVariable Integer idCulture, @PathVariable Integer idTray, @RequestBody FarmCultureNewReqDto req) {
+		req.setIdFarm(idFarm);
+		req.setIdCulture(idCulture);
+		req.setIdTray(idTray);
+		return new ResponseEntity<FarmCultureUpdateRespDto>(farmsService.updateCulture(req),HttpStatus.OK);
 	}
 }

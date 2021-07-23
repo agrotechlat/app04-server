@@ -9,6 +9,7 @@ import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
 import org.egreen.server.dto.FarmCultureNewRespDto;
+import org.egreen.server.dto.FarmCultureUpdateRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.SeedDto;
@@ -85,6 +86,16 @@ public class FarmsService implements FarmsServiceI {
 		
 		FarmCultureNewRespDto resp = new FarmCultureNewRespDto(req.getIdTray());
 		
+		return resp;
+	}
+
+	@Override
+	public FarmCultureUpdateRespDto updateCulture(FarmCultureNewReqDto req) {
+		// validate inputs and business rules
+		
+		// Database operations
+		
+		FarmCultureUpdateRespDto resp = new FarmCultureUpdateRespDto(req.getIdTray());
 		return resp;
 	}
 
