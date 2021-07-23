@@ -19,5 +19,5 @@ import lombok.ToString;
 @ToString
 public class FarmReqDto {
 	private Integer idFarm;
-	private Integer idWaterTray;
+	private Integer idCulture;
 }

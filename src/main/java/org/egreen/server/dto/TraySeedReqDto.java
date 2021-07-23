@@ -24,6 +24,8 @@ public class TraySeedReqDto {
 	 */
 	private Integer idFarm;
 	
+	private Integer idCulture;
+	
 	/**
 	 * The new seed that we want set as actual seed.
 	 */

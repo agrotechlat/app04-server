@@ -59,7 +59,7 @@ public class FarmsService implements FarmsServiceI {
 		trays.add(new CultureTray(3, LocalDateTime.now(), 80, "Microgreen"));
 		trays.add(new CultureTray(4, LocalDateTime.now(), 20, "Seed"));
 		
-		WaterTray waterTray = new WaterTray(farmReqDto.getIdWaterTray(), seed, trays);
+		WaterTray waterTray = new WaterTray(farmReqDto.getIdCulture(), seed, trays);
 		
 		resp.setFarmId(farmReqDto.getIdFarm());
 		resp.setTray(waterTray);

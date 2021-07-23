@@ -19,23 +19,53 @@ import org.egreen.server.dto.TraySeedRespDto;
  *
  */
 public interface FarmsServiceI {
-
+	
 	/**
-	 * Change the seed of a tray.
+	 * Get current status of a water tray.
+	 * 
+	 * @param farmReqDto Parameters required to perform the query.
+	 * @return The data of a water tray.
+	 */
+	public FarmRespDto getWaterTrayStatus(FarmReqDto farmReqDto);
+	
+	/**
+	 * Change the seed of a water tray.
 	 * 
 	 * @param traySeedReqDto Data to execute a change of seed
 	 * @return Change seed result.
 	 */
 	public TraySeedRespDto changeSeed(TraySeedReqDto traySeedReqDto);
-	
-	public FarmRespDto getWaterTrayStatus(FarmReqDto farmReqDto);
 
+	/**
+	 * Get current culture tray status.
+	 * 
+	 * @param req Parameters required to perform the query.
+	 * @return The data of a culture tray.
+	 */
 	public FarmCultureDetailRespDto getTrayStatus(FarmCultureDetailReqDto req);
 
+	/**
+	 * New culture in a culture tray.
+	 * 
+	 * @param req Parameters required to create a culture in a tray.
+	 * @return Create confirmation data.
+	 */
 	public FarmCultureNewRespDto newCultureTray(FarmCultureNewReqDto req);
 
+	/**
+	 * Update the culture data of a culture tray.
+	 * 
+	 * @param req Parameters required to update the data.
+	 * @return Update confirmation data
+	 */
 	public FarmCultureUpdateRespDto updateCulture(FarmCultureNewReqDto req);
 
+	/**
+	 * Delete an culture tray.
+	 * 
+	 * @param req Parameters required to delete a culture in a tray.
+	 * @return Delete confirmation data.
+	 */
 	public FarmCultureDeleteRespDto deleteCultureTray(FarmCultureDeleteReqDto req);
 
 }
