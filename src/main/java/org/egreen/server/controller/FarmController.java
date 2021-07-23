@@ -2,6 +2,8 @@ package org.egreen.server.controller;
 
 import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
+import org.egreen.server.dto.FarmCultureNewReqDto;
+import org.egreen.server.dto.FarmCultureNewRespDto;
 import org.egreen.server.dto.FarmReqDto;
 import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.TraySeedReqDto;
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,5 +70,15 @@ public class FarmController {
 				@PathVariable Integer idTray) {
 		FarmCultureDetailReqDto req = new FarmCultureDetailReqDto(idFarm, idCulture, idTray);
 		return new ResponseEntity<FarmCultureDetailRespDto>(farmsService.getTrayStatus(req), HttpStatus.OK);
+	}
+
+	@PostMapping("/farms/{idFarm}/cultures/{idCulture}/trays/{idTray}")
+	public @ResponseBody ResponseEntity<FarmCultureNewRespDto> newCultureTray(@PathVariable Integer idFarm, @PathVariable Integer idCulture, @PathVariable Integer idTray, @RequestBody FarmCultureNewReqDto req) {
+		
+		req.setIdFarm(idFarm);
+		req.setIdCulture(idCulture);
+		req.setIdTray(idTray);
+		
+		return new ResponseEntity<FarmCultureNewRespDto>(farmsService.newCultureTray(req), HttpStatus.CREATED);
 	}
 }
