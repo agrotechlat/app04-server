@@ -1,5 +1,7 @@
 package org.egreen.server.service;
 
+import org.egreen.server.dto.FarmCultureDeleteReqDto;
+import org.egreen.server.dto.FarmCultureDeleteRespDto;
 import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
@@ -33,5 +35,7 @@ public interface FarmsServiceI {
 	public FarmCultureNewRespDto newCultureTray(FarmCultureNewReqDto req);
 
 	public FarmCultureUpdateRespDto updateCulture(FarmCultureNewReqDto req);
+
+	public FarmCultureDeleteRespDto deleteCultureTray(FarmCultureDeleteReqDto req);
 
 }

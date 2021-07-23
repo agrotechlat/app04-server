@@ -1,5 +1,7 @@
 package org.egreen.server.controller;
 
+import org.egreen.server.dto.FarmCultureDeleteReqDto;
+import org.egreen.server.dto.FarmCultureDeleteRespDto;
 import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
@@ -13,6 +15,7 @@ import org.egreen.server.service.FarmsServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -89,5 +92,11 @@ public class FarmController {
 		req.setIdCulture(idCulture);
 		req.setIdTray(idTray);
 		return new ResponseEntity<FarmCultureUpdateRespDto>(farmsService.updateCulture(req),HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/farms/{idFarm}/cultures/{idCulture}/trays/{idTray}")
+	public @ResponseBody ResponseEntity<FarmCultureDeleteRespDto> deleteCultureTray(@PathVariable Integer idFarm, @PathVariable Integer idCulture, @PathVariable Integer idTray) {
+		FarmCultureDeleteReqDto req = new FarmCultureDeleteReqDto(idFarm, idCulture, idTray);
+		return new ResponseEntity<FarmCultureDeleteRespDto>(farmsService.deleteCultureTray(req), HttpStatus.OK);
 	}
 }

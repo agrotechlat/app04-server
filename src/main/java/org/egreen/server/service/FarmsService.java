@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.egreen.server.dto.CultureTray;
+import org.egreen.server.dto.FarmCultureDeleteReqDto;
+import org.egreen.server.dto.FarmCultureDeleteRespDto;
 import org.egreen.server.dto.FarmCultureDetailReqDto;
 import org.egreen.server.dto.FarmCultureDetailRespDto;
 import org.egreen.server.dto.FarmCultureNewReqDto;
@@ -96,6 +98,17 @@ public class FarmsService implements FarmsServiceI {
 		// Database operations
 		
 		FarmCultureUpdateRespDto resp = new FarmCultureUpdateRespDto(req.getIdTray());
+		return resp;
+	}
+
+	@Override
+	public FarmCultureDeleteRespDto deleteCultureTray(FarmCultureDeleteReqDto req) {
+		// validate inputs and business rules
+		
+		// Database operations
+		
+		
+		FarmCultureDeleteRespDto resp = new FarmCultureDeleteRespDto(req.getIdTray());
 		return resp;
 	}
 
