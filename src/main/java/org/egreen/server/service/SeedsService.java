@@ -21,9 +21,9 @@ public class SeedsService implements SeedsServiceI {
 	public SeedsRespDto getSeeds(SeedsReqDto req) {
 		List<SeedDto> seedsList = new ArrayList<>();		
 		seedsList.add(new SeedDto(1, "Lentils"));
-		seedsList.add(new SeedDto(1, "Chia"));
-		seedsList.add(new SeedDto(1, "Weat"));
-		seedsList.add(new SeedDto(1, "Flax"));
+		seedsList.add(new SeedDto(2, "Chia"));
+		seedsList.add(new SeedDto(3, "Weat"));
+		seedsList.add(new SeedDto(4, "Flax"));
 		SeedsRespDto resp = new SeedsRespDto(seedsList);		
 		return resp;
 	}
