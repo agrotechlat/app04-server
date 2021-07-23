@@ -1,5 +1,7 @@
 package org.egreen.server.service;
 
+import org.egreen.server.dto.FarmReqDto;
+import org.egreen.server.dto.FarmRespDto;
 import org.egreen.server.dto.TraySeedReqDto;
 import org.egreen.server.dto.TraySeedRespDto;
 
@@ -18,5 +20,7 @@ public interface FarmsServiceI {
 	 * @return Change seed result.
 	 */
 	public TraySeedRespDto changeSeed(TraySeedReqDto traySeedReqDto);
+	
+	public FarmRespDto getWaterTrayStatus(FarmReqDto farmReqDto);
 
 }
