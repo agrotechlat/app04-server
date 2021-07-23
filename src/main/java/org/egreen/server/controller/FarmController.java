@@ -30,11 +30,11 @@ public class FarmController {
 	FarmsServiceI farmsService;
 	
 	/**
+	 * Update the Water tray seed that has assigned.
 	 * 
-	 * 
-	 * @param idFarm
-	 * @param traySeedReqDto
-	 * @return
+	 * @param idFarm Unique identifier of the farm.
+	 * @param traySeedReqDto Seed data that will be assigned as current seed.
+	 * @return Response data after correctly update the current seed.
 	 */
 	@PutMapping("/farms/{idFarm}/seed")
 	public @ResponseBody ResponseEntity<TraySeedRespDto> changeSeedTRay(@PathVariable Integer idFarm, @RequestBody TraySeedReqDto traySeedReqDto) {
