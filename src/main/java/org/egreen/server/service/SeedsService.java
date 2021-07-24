@@ -6,6 +6,8 @@ import java.util.List;
 import org.egreen.server.dto.SeedDto;
 import org.egreen.server.dto.SeedsReqDto;
 import org.egreen.server.dto.SeedsRespDto;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,7 +18,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SeedsService implements SeedsServiceI {
-
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
 	@Override
 	public SeedsRespDto getSeeds(SeedsReqDto req) {
 		List<SeedDto> seedsList = new ArrayList<>();		
