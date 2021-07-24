@@ -1,4 +1,4 @@
-package application;
+package org.egreen.server;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
