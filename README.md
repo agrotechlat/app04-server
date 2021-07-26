@@ -1,7 +1,7 @@
 <p align="center">
     <a href="https://cloud.ibm.com">
         <img src="https://cloud.ibm.com/media/docs/developer-appservice/resources/ibm-cloud.svg" height="100" alt="IBM Cloud">
-        <img src="https://ibb.co/D5stPnk" height="100" alt="Logo">
+        <img src="https://i.postimg.cc/QML33b54/e-Greens-logo.png" height="100" alt="Logo">
     </a>
 </p>
 
