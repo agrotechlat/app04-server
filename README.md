@@ -15,6 +15,39 @@
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
 </p>
 
+## What is Egreens? ##
+
+eGreens, is a hydroponic system to produce fast growing food through the use of technology and automation. With eGreens people will be able to grow their own food, on their own land, regardless of the weather conditions, without the need for agrochemicals, and with the use of the latest cloud technology, recipes of cultivation and artificial intelligence to maximize their production.
+
+## Contents 
+
+01. [Description](#Description)
+02. [Demo Video](#Demo-Video)
+03. [Solution Architecture](#Solution-Architecture)
+04. [Getting Started](#Getting-Started)
+05. [Authors](#Authors)
+06. [License](License)
+
+## Description <a name="Description"></a>
+
+eGreens is made up of a mobile application, a cloud server, and a local server. The web application allows you to interact with eGreens using any device. The application in IBM Cloud supports all the necessary communication between the web app and the local server. The latter is responsible for being the bridge between the sensors and actuators. All this forms an IoT network, the foundations to enter Industry 4.0, digital twins, and a preparation to enter the world of big data and Artificial Intelligence.
+
+Our subscription model allows  to use it as part of a healthy life or start a business, we will establish alliances with companies and NGOs that join this fight against hunger. We will monetize the app through subscription and advertisements that offer various services related to cultivation.
+
+There are few similar solutions in the market and we will be the solution that helps you make better decisions and intelligently manage your crops.
+
+To make our solution a reality, we have already made the first prototype and will soon be launching it on the market.
+
+At eGreens we believe that ending hunger in Latin America and the world through smart technology is possible, so we invite you to join the project and collaborate to achieve the goal of zero hunger in the world.
+
+
+## Demo Video <a name="Demo-Video"></a>
+[![Demo Video](https://imgur.com/1arEPXm.png)](https://www.youtube.com/watch?v=l_jXrAoHCAs&ab_channel=eGreens "DEMO VIDEO")
+
+
+## Solution Architecture <a name="Solution-Architecture"></a>
+![Solution Architecture](https://imgur.com/bm05pnF.png)
+
 
 # Create and deploy a basic Java Spring application
 
@@ -106,7 +139,13 @@ ibmcloud dev debug
 * Learn more about augmenting your Java applications on IBM Cloud with the [Java Programming Guide](https://cloud.ibm.com/docs/java?topic=java-getting-started).
 * Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
-## License
+## Authors <a name="Authors"></a>
+
+We are proud to be a diverse team, we are all from different countries: Argentina, Uruguay, Peru, Mexico and Venezuela!
+
+![Authors](https://imgur.com/8p3DiO5.png)
+
+## License <a name="License"></a>
 
 This sample application is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
