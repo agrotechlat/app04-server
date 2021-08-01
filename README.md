@@ -26,8 +26,9 @@ eGreens, is a hydroponic system to produce fast growing food through the use of 
 03. [Solution Architecture](#Solution-Architecture)
 04. [Project Roadmap](#Project-Roadmap)
 05. [Getting Started](#Getting-Started)
-06. [Authors](#Authors)
-07. [License](License)
+06. [Live Demo](#Live-Demo)
+07. [Authors](#Authors)
+08. [License](License)
 
 ## Description <a name="Description"></a>
 
@@ -51,12 +52,11 @@ At eGreens we believe that ending hunger in Latin America and the world through 
 
 ![Solution Architecture 2](https://imgur.com/mcFHNY8.png)
 
-## Project Roadmap <a name="Project-Roadma"></a>
+## Project Roadmap <a name="Project-Roadmap"></a>
 
 You can learn a little more about Greens and see the Roadmap from the following document
 
 [![Project Roadmap](https://imgur.com/NsSYMSh.png)](https://drive.google.com/file/d/1qD3RxIvPAh29LkDErEJ0FXtV82ebh9W0/view?usp=sharing "Project Roadmap")
-
 
 # Create and deploy a basic Java Spring application <a name="Getting-Started"></a>
 
@@ -147,6 +147,10 @@ ibmcloud dev debug
 ## Next Steps
 * Learn more about augmenting your Java applications on IBM Cloud with the [Java Programming Guide](https://cloud.ibm.com/docs/java?topic=java-getting-started).
 * Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
+
+## Live Demo <a name="Live-Demo"></a>
+
+You can find a running system to test at http://egreensapp.mybluemix.net/
 
 ## Authors <a name="Authors"></a>
 
